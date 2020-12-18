@@ -1,13 +1,14 @@
 from game_data import data
 from art import logo, vs
 from replit import clear
-
+import random
 
 def game():
   print(logo, "\n")
   game_end="No"
   point=0
   index=0
+  random.shuffle(data)
   person=data[index]
   while game_end=="No":
       person=data[index]
