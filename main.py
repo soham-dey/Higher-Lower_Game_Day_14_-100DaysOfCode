@@ -4,7 +4,6 @@ from replit import clear
 import random
 
 def game():
-  print(logo, "\n")
   game_end="No"
   point=0
   index=0
@@ -30,6 +29,8 @@ def game():
       max_count=max(follower_count_list)
       max_name=compare_dict[max_count]
       max_option=name_dict[max_name]
+      print(logo, "\n")
+      print(f"Your Point is {point}\n")
       print(f"Option a: {a_name}, a {a_des} from {a_loc}.\n")
       print(vs, "\n")
       print(f"Option b: {b_name}, a {b_des} from {b_loc}.\n ")
@@ -37,11 +38,13 @@ def game():
       if user_choice==max_option:
         point+=1
         index+=1
+        clear()
         print("Let's move to the next guess...\n\n")
       else:
         game_end="Yes"
         print("You have lost!\n\n")
-      print(f"Your Point is {point}\n")
+        print(f"Your Point is {point}\n")
+      
 
   play_again='y'
   while play_again=='y':
