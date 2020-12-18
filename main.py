@@ -31,16 +31,16 @@ def game():
       max_name=compare_dict[max_count]
       max_option=name_dict[max_name]
       print(f"Option a: {a_name}, a {a_des} from {a_loc}.\n")
-      print(vs)
+      print(vs, "\n")
       print(f"Option b: {b_name}, a {b_des} from {b_loc}.\n ")
       user_choice=input("Guess who has more followers on Instagram? Type 'a' or 'b': ")
       if user_choice==max_option:
         point+=1
         index+=1
-        print("Let's move to the next guess...\n")
+        print("Let's move to the next guess...\n\n")
       else:
         game_end="Yes"
-        print("You have lost!\n")
+        print("You have lost!\n\n")
       print(f"Your Point is {point}\n")
 
   play_again='y'
